@@ -1,0 +1,118 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #f1f4f8, #dbeafe);
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Carte contact --- */
+.contact-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+.contact-card:hover {
+  transform: scale(1.01);
+}
+
+/* --- Image ou icône réaliste --- */
+.contact-img,
+.contact-img-default {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.contact-img-default {
+  background-color: #f0f0f0;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/847/847969.png');
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #ccc;
+}
+
+/* --- Infos texte --- */
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.contact-phone {
+  font-size: 0.95em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* --- Boutons flex --- */
+.contact-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.contact-actions .ui-btn {
+  flex: 1;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 6px;
+}
+
+/* --- Carte détail contact --- */
+.detail-card {
+  margin: 30px auto;
+  padding: 25px;
+  max-width: 360px;
+  background: linear-gradient(to bottom right, #ffffff, #f3f8ff);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.detail-photo,
+.detail-photo-default {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: block;
+  object-fit: cover;
+}
+
+.detail-photo-default {
+  background-color: #f0f0f0;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/847/847969.png');
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #ccc;
+}
+
+.detail-card h2 {
+  font-size: 24px;
+  color: #000;
+  margin: 10px 0;
+}
+
+.detail-card p {
+  font-size: 16px;
+  color: #444;
+  margin: 6px 0;
+}
