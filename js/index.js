@@ -107,7 +107,6 @@ function supprimerContact(index) {
     afficherContacts();
   }
 }
-
 $("#searchContact").on("input", function () {
   const term = $(this).val().toLowerCase();
   const resultats = contacts.filter(c => c.nom.toLowerCase().includes(term));
@@ -115,4 +114,22 @@ $("#searchContact").on("input", function () {
 
   resultats.forEach((c, index) => {
     const photo = c.photo
-      ? `<img src="${c.photo}" class="contact-img
+      ? `<img src="${c.photo}" class="contact-img" alt="Photo">`
+      : `<div class="contact-img-default">👤</div>`;
+
+    const item = `
+      <div class="contact-card">
+        ${photo}
+        <div class="contact-info">
+          <div class="contact-name">${c.nom}</div>
+          <div class="contact-phone">${c.telephone}</div>
+          <div class="contact-actions">
+            <a href="#viewPage" onclick="voirContact(${index})" class="ui-btn ui-mini ui-btn-a">Voir</a>
+            <a href="#addPage" onclick="chargerFormulaire(${index})" class="ui-btn ui-mini ui-btn-b">Modifier</a>
+            <a href="#" onclick="supprimerContact(${index})" class="ui-btn ui-mini ui-btn-c">Supprimer</a>
+          </div>
+        </div>
+      </div>`;
+    liste.append(item);
+  });
+});
